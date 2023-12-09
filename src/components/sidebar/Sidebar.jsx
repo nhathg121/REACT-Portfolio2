@@ -18,7 +18,7 @@ const Sidebar = () => {
     closed: {
       clipPath: "circle(30px at 50px 50px)",
       trannsition: {
-        delay: 0.5,
+        delay: 5,
         type: "zoom",
         stiffness: 200,
         damping: 40,

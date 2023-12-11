@@ -1,10 +1,11 @@
-import React from "react";
 import "./app.sass";
 
+//import Component
 import Parallax from "./components/parallax/Parallax.jsx";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
+import Portfolio from "./components/portfolio/Pofolio.jsx";
 const App = () => {
   return (
     <div>
@@ -21,9 +22,9 @@ const App = () => {
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-      <section>Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section>
+
+      <Portfolio />
+
       <section id="Contact">Contact</section>
       <section id="About">Contact</section>
     </div>

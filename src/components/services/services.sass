@@ -1,5 +1,5 @@
 .services
-    background: linear-gradient(to right, #000000, #000000)
+    background: linear-gradient(180deg, #01162f, #052348)
     height: 100%
     display: flex
     flex-direction: column
@@ -49,6 +49,11 @@
             border: none
             font-size: 24px
             cursor: pointer
+            &:hover 
+                background-color: #7c7c7c
+            &:active
+                scale: 0.9
+                
     .listContainer    
         flex: 2
         display: flex
@@ -60,7 +65,6 @@
             border: 0.5px solid gray
             flex-direction: column
             justify-content: space-between
-            
             margin-top: 30px
             button
                 padding: 10px
@@ -68,3 +72,4 @@
                 border: none
                 cursor: pointer
                 width: 100%
+                border-radius:5px

@@ -2,6 +2,8 @@
     height: calc( 100vh - 100px )
     background-color: linear-gradient(180deg,#0c0c1d,#1111)
     position: relative
+    overflow: hidden
+
     .wrapper
         max-width: 80%
         height: 100%
@@ -12,9 +14,26 @@
             flex-direction: column
             justify-content: center
             gap: 40px
-        h2
-            font-size: 40px
-            color: rebecapurple
+            width: 50%
+
+            h2
+                font-size: 40px
+                color: #0174BE
+                letter-spacing: 10px
+                z-index: 1
+            h1
+                font-size: 88px
+            .buttons
+                width: 100%
+                button
+                    padding: 20px
+                    border: 1px solid white
+                    border-radius: 10px
+                    font-size: 15px
+                    background-color: transparent
+                    color: white
+                    margin-right: 20px
+                    font-weight: 300
         img
             width: 50px
 .imageContainer
@@ -22,3 +41,10 @@
     height: 100%
     top: 0
     right: 0
+.slidingTextContainer
+    position: absolute
+    font-size: 50vh
+    bottom: -120px
+    white-space: nowrap
+    color: #ffffff09
+    width: 50%

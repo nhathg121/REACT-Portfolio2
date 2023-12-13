@@ -1,15 +1,18 @@
-import "./parallax.sass";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import "./parallax.scss";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const Parallax = ({ type }) => {
   const ref = useRef();
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
     <div
       className="parallax"
@@ -17,14 +20,14 @@ const Parallax = ({ type }) => {
       style={{
         background:
           type === "services"
-            ? "linear-gradient(180deg,#111132,#0c0c1d"
-            : "linear-gradient(180deg,#111132,#505064",
+            ? "linear-gradient(180deg, #111132, #0c0c1d)"
+            : "linear-gradient(180deg, #111132, #505064)",
       }}
     >
-      <motion.h1 style={{ y: yText }} className="title">
-        {type == "services" ? "What I Do ?" : "What I Did ?"}
+      <motion.h1 style={{ y: yText }}>
+        {type === "services" ? "What We Do?" : "What We Did?"}
       </motion.h1>
-      <motion.div className="mountain"></motion.div>
+      <motion.div className="mountains"></motion.div>
       <motion.div
         className="planets"
         style={{

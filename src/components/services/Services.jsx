@@ -1,6 +1,6 @@
-import "./services.sass";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import "./services.scss";
+import { motion, useInView } from "framer-motion";
 
 const variants = {
   initial: {
@@ -21,6 +21,7 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
+
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
@@ -31,95 +32,81 @@ const Services = () => {
       // animate="animate"
       // whileInView="animate"
       ref={ref}
-      animate={isInView && "animate"}
+      animate={"animate"}
     >
-      {/* Text Container */}
       <motion.div className="textContainer" variants={variants}>
         <p>
           I focus on helping your brand grow
-          <br />
-          and move forward
+          <br /> and move forward
         </p>
         <hr />
       </motion.div>
-      {/* Title Container */}
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }} variants={variants}>
-              Unique{" "}
-            </motion.b>
-            Ideas
+            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }} variants={variants}>
-              For Your{" "}
-            </motion.b>
-            Bussiness
+            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT I DO?</button>
+          <button>WHAT WE DO?</button>
         </div>
       </motion.div>
-      {/* List Container */}
       <motion.div className="listContainer" variants={variants}>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
           className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2 className="title">Branding</h2>
+          <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam maxime
-            ducimus in veritatis optio nesciunt laboriosam neque culpa harum
-            obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
-          <button>Over View</button>
+          <button>Go</button>
         </motion.div>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
           className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2 className="title">Branding</h2>
+          <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam maxime
-            ducimus in veritatis optio nesciunt laboriosam neque culpa harum
-            obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
-          <button>Over View</button>
+          <button>Go</button>
         </motion.div>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
           className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2 className="title">Branding</h2>
+          <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam maxime
-            ducimus in veritatis optio nesciunt laboriosam neque culpa harum
-            obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
-          <button>Over View</button>
+          <button>Go</button>
         </motion.div>
         <motion.div
-          whileHover={{ background: "lightgray", color: "black" }}
           className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2 className="title">Branding</h2>
+          <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam maxime
-            ducimus in veritatis optio nesciunt laboriosam neque culpa harum
-            obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
-          {/* open link to new window button */}
-          <button
-            onClick={() => {
-              window.location.href = "https://www.google.com";
-            }}
-            type="button"
-          >
-            Over View
-          </button>
+          <button>Go</button>
         </motion.div>
       </motion.div>
     </motion.div>

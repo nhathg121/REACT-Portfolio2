@@ -1,30 +1,37 @@
-import React from "react";
-import "./navbar.sass";
 import Sidebar from "../sidebar/Sidebar";
+import "./navbar.scss";
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   return (
     <div className="navbar">
+      {/* Sidebar */}
       <Sidebar />
       <div className="wrapper">
-        <h2 style={{ fontFamily: "sans-serif" }}>
-          DIFFUSION
-        </h2>
+        <motion.span
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Diffusion
+        </motion.span>
         <div className="social">
-          <a href="https://www.facebook.com/nhathg121" target="_blank">
+          <a href="#">
             <img src="/facebook.png" alt="" />
           </a>
-          <a href="https://www.instagram.com/nhat.hh/">
+          <a href="#">
             <img src="/instagram.png" alt="" />
           </a>
           <a href="#">
             <img src="/youtube.png" alt="" />
           </a>
           <a href="#">
-            <img src="/zalo-logo.png" style={{ scale: "2" }} alt="" />
+            <img src="/dribbble.png" alt="" />
           </a>
         </div>
       </div>
     </div>
   );
 };
+
 export default Navbar;

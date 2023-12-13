@@ -1,13 +1,12 @@
+import Test from "./Test";
 import "./app.scss";
-
-//import Component
-import Parallax from "./components/parallax/Parallax.jsx";
-import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
-import Services from "./components/services/Services";
-import Portfolio from "./components/portfolio/Portfolio.jsx";
 import Contact from "./components/contact/Contact";
-import Cursor from "./components/cursor/Cursor.jsx";
+import Cursor from "./components/cursor/Cursor";
+import Hero from "./components/hero/Hero";
+import Navbar from "./components/navbar/Navbar";
+import Parallax from "./components/parallax/Parallax";
+import Portfolio from "./components/portfolio/Portfolio";
+import Services from "./components/services/Services";
 
 const App = () => {
   return (
@@ -26,13 +25,13 @@ const App = () => {
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-
       <Portfolio />
-
       <section id="Contact">
         <Contact />
       </section>
-      <section id="About">About</section>
+      {/* Framer Motion Crash Course */}
+      {/* <Test/>
+    <Test/> */}
     </div>
   );
 };

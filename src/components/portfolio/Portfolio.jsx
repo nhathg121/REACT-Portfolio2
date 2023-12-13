@@ -1,7 +1,6 @@
-import "./portfolio.sass";
-
-import { motion, useSpring, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import "./portfolio.scss";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
@@ -32,53 +31,55 @@ const items = [
 
 const Single = ({ item }) => {
   const ref = useRef();
+
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const y = useTransform(scrollYProgress, [0, 1], [-1000, 1000]);
+
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section>
+    <section >
       <div className="container">
         <div className="wrapper">
-          <div className="imgContainer" ref={ref}>
+          <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{ y: y }}>
+          <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See More</button>
+            <button>See Demo</button>
           </motion.div>
         </div>
       </div>
     </section>
   );
 };
-const Pofolio = () => {
+
+const Portfolio = () => {
   const ref = useRef();
+
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "start end"],
+    offset: ["end end", "start start"],
   });
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
   });
+
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1>Featured Works</h1>
-        <motion.div
-          style={{ scaleX: scaleX }}
-          className="progressBar"
-        ></motion.div>
+        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
-        <Single item={item} key={item.id} style={{ zIndex: 1 }} />
+        <Single item={item} key={item.id} />
       ))}
     </div>
   );
 };
 
-export default Pofolio;
+export default Portfolio;

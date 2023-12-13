@@ -1,4 +1,4 @@
-# React + Vite
+# PORTFOLIO - Project
+USing framer-motion to create animation for component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
